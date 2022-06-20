@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "FEASFBI";
+    src: url("./FEASFBI_.TTF");
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+html { scroll-behavior: smooth; }
+.content {
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+}
+
+.start {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    border: 20px solid transparent;
+    border-top-color: black;
+    border-radius: 10px;
+    animation: updown 1s infinite ease-in-out;
+}
+
+#title {
+    margin-bottom: 0;
+    font-family: "FEASFBI";
+}
+
+.about {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.install {
+    height: 50vh;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
